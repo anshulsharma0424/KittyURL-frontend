@@ -1,22 +1,15 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import LandingPage from './components/LandingPage'
-import AboutPage from './components/AboutPage'
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { getApps } from './utils/helper'
 
 function App() {
+
+  const CurrentApp = getApps();
+
   return (
-    <>
-      <BrowserRouter>
-      <NavBar/>
-        <Routes>
-          <Route path='/' element = {<LandingPage />}></Route>
-          <Route path='/about' element = {<AboutPage />}></Route>
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
-    </>
+    <Router>
+      <CurrentApp />
+    </Router>
   )
 }
 
