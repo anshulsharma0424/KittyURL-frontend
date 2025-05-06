@@ -93,12 +93,12 @@ const LandingPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center font-quicksand font-semibold text-2xl sm:text-3xl mb-10 text-slate-800"
+          className="text-center font-quicksand font-semibold text-2xl sm:text-4xl mb-10 text-slate-800"
         >
           Trusted by individuals and teams at leading companies worldwide
         </motion.p>
 
-        <div className="text-justifyfont-quicksand pt-4 pb-7 grid lg:gap-7 gap-4 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-4">
+        <div className="font-quicksand pt-4 pb-7 grid lg:gap-7 gap-4 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-4">
           <Card
             title="Effortless URL Shortening"
             desc="Create concise, shareable URLs instantly with our sleek and user-friendly platform. Get started in seconds—no technical skills required."

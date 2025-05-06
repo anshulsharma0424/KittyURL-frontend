@@ -50,12 +50,12 @@ const DashboardLayout = () => {
           {/* Graph Section */}
           <div className="h-96 relative">
             {Array.isArray(totalClicks) && totalClicks.length === 0 && (
-              <div className="absolute flex flex-col justify-center sm:items-center items-end w-full left-0 top-0 bottom-0 right-0 m-auto">
-                <h1 className="text-slate-800 font-serif sm:text-2xl text-[18px] font-bold mb-1">
-                  No Data For This Time Period
+              <div className="text-center absolute flex flex-col justify-center sm:items-center items-end w-full left-0 top-0 bottom-0 right-0 m-auto">
+                <h1 className="font-quicksand text-slate-800 sm:text-2xl text-[20px] font-bold mb-1">
+                No data for this time period
                 </h1>
-                <h3 className="sm:w-96 w-[90%] sm:ml-0 pl-6 text-center sm:text-lg text-sm text-slate-600">
-                  Share your short link to view where your engagements are coming from
+                <h3 className="sm:w-100 w-[90%] sm:ml-0 pl-6 sm:text-lg text-sm text-slate-600">
+                  Share your short link to view where your engagements are coming from.
                 </h3>
               </div>
             )}
@@ -78,7 +78,7 @@ const DashboardLayout = () => {
               <Loader />
             ) : myShortenUrls && myShortenUrls.length === 0 ? (
               <div className="flex justify-center pt-16">
-                <div className="flex gap-2 items-center justify-center py-6 sm:px-8 px-5 rounded-md shadow-lg bg-gray-50">
+                <div className="flex gap-2 items-center justify-center py-6 sm:px-8 px-5 rounded-md shadow-lg bg-custom-gradient3">
                   <h1 className="text-slate-800 font-montserrat sm:text-[18px] text-[14px] font-semibold mb-1">
                     You haven't created any short link yet
                   </h1>
