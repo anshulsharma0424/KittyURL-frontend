@@ -33,16 +33,17 @@ const LandingPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="font-bold font-roboto text-slate-800 md:text-5xl sm:text-4xl text-3xl md:leading-[55px] sm:leading-[45px] leading-10 lg:w-full md:w-[70%] w-full"
+            className="font-bold font-quicksand text-slate-800 md:text-5xl sm:text-4xl text-3xl md:leading-[55px] sm:leading-[45px] leading-10 lg:w-full md:w-[70%] w-full"
           >
-            Simplify Your Links with KittyURL
+            Simplify your links with{" "}
+            <span className="text-btnColor">KittyURL</span>
           </motion.h1>
 
-          <p className="text-slate-600 mt-4 text-base md:text-lg my-5">
-            KittyURL transforms long, messy URLs into sleek, shareable links in
-            seconds. Whether you're promoting content, tracking performance, or
-            just simplifying your sharing process — KittyURL makes it
-            effortless.
+          <p className="font-quicksand text-slate-600 mt-4 text-base md:text-lg my-5 text-justify">
+            Turn long, cluttered URLs into clean, memorable links in an instant.
+            Whether you're sharing content, tracking clicks, or managing
+            campaigns, KittyURL gives you the power to streamline and monitor
+            your links—all with ease and elegance.
           </p>
 
           <div className="flex items-center gap-3">
@@ -52,8 +53,7 @@ const LandingPage = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               onClick={goToDashboard}
-              className="w-40 text-white rounded-md py-2"
-              style={{ backgroundColor: "#FF7F3E" }}
+              className="w-40 text-white font-semibold font-quicksand border-2 border-btnColor rounded-md py-2 bg-btnColor shadow-md hover:shadow-lg"
             >
               Manage Links
             </motion.button>
@@ -63,7 +63,7 @@ const LandingPage = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               onClick={goToCreateShortLink}
-              className="border-btnColor border w-40 text-btnColor rounded-md py-2"
+              className="border-btnColor font-quicksand border-2 w-40 text-btnColor font-semibold rounded-md py-2 shadow-md hover:shadow-lg"
             >
               Create Short Link
             </motion.button>
@@ -72,10 +72,14 @@ const LandingPage = () => {
 
         <div className="flex-1 flex justify-center w-full">
           <motion.img
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            animate={{ scale: [1, 1.08, 1] }} // zoom in slightly and back
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
             className="sm:w-[480px] w-[400px] object-cover rounded-md"
             src="/images/img2.png"
             alt="Landing Visual"
@@ -89,12 +93,12 @@ const LandingPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center font-roboto font-semibold text-2xl sm:text-3xl mb-10"
+          className="text-center font-quicksand font-semibold text-2xl sm:text-3xl mb-10 text-slate-800"
         >
           Trusted by individuals and teams at leading companies worldwide
         </motion.p>
 
-        <div className="pt-4 pb-7 grid lg:gap-7 gap-4 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-4">
+        <div className="text-justifyfont-quicksand pt-4 pb-7 grid lg:gap-7 gap-4 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-4">
           <Card
             title="Effortless URL Shortening"
             desc="Create concise, shareable URLs instantly with our sleek and user-friendly platform. Get started in seconds—no technical skills required."

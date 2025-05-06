@@ -15,6 +15,7 @@ const modalStyle = {
   borderRadius: 2,
   p: 4,
   outline: 'none',
+  fontFamily: 'Quicksand'
 };
 
 const ShortenPopUp = ({ open, setOpen, refetch }) => {

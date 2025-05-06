@@ -36,7 +36,7 @@ const Graph = ({ graphData }) => {
             ? userPerDaya
             : [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1],
         backgroundColor:
-         graphData.length > 0 ? "#3b82f6" : "rgba(54, 162, 235, 0.1)",
+         graphData.length > 0 ? "#fabb98" : "rgba(54, 162, 235, 0.1)",
         borderColor: "#1D2327",
         pointBorderColor: "red",
         fill: true,
@@ -72,7 +72,7 @@ const Graph = ({ graphData }) => {
           display: true,
           text: "Number Of Clicks",
           font: {
-            family: "Arial",
+            family: "quicksand",
             size: 16,
             weight: "bold",
             color: "#FF0000",
@@ -88,7 +88,7 @@ const Graph = ({ graphData }) => {
           display: true,
           text: "Date",
           font: {
-            family: "Arial",
+            family: "quicksand",
             size: 16,
             weight: "bold",
             color: "#FF0000",

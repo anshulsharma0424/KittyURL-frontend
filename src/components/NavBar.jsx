@@ -17,13 +17,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-16 bg-custom-gradient  z-50 flex items-center sticky top-0 ">
+    <div className="h-16 bg-custom-gradient z-50 flex items-center top-0 ">
       <div className="lg:px-14 sm:px-8 px-4 w-full flex justify-between">
         <Link to="/">
           <img
-            src="" // or "/myfavicon.ico" if it's an image
+            src="/logo.png"
             alt="KittyURL Logo"
-            className="w-12 h-12 sm:mt-0 mt-2 rounded-[12%]"
+            className="w-19 h-12 sm:mt-0 mt-2 rounded-[8%] shadow-lg"
           />
         </Link>
 
@@ -32,44 +32,44 @@ const Navbar = () => {
             navbarOpen ? "h-fit sm:pb-0 pb-5" : "h-0 overflow-hidden"
           }  transition-all duration-100 sm:h-fit sm:bg-none  bg-custom-gradient sm:w-fit w-full sm:flex-row flex-col px-4 sm:px-0`}
         >
-          <li className="hover:text-btnColor font-[500]  transition-all duration-150">
+          <li className="font-quicksand hover:text-btnColor font-[500]  transition-all duration-150">
             <Link
               className={`${
-                path === "/" ? "text-white font-semibold" : "text-gray-200"
+                path === "/" ? "text-white font-semibold" : "text-gray-400"
               }`}
               to="/"
             >
-              Home
+              HOME
             </Link>
           </li>
-          <li className="hover:text-btnColor font-[500]  transition-all duration-150">
+          <li className="font-quicksand font-[500]  transition-all duration-150">
             <Link
               className={`${
-                path === "/about" ? "text-white font-semibold" : "text-gray-200"
+                path === "/about" ? "text-white font-semibold" : "text-gray-400"
               }`}
               to="/about"
             >
-              About
+              ABOUT
             </Link>
           </li>
           {token && (
-            <li className="hover:text-btnColor font-[500]  transition-all duration-150">
+            <li className="font-quicksand font-[500]  transition-all duration-150">
               <Link
                 className={`${
                   path === "/dashboard"
                     ? "text-white font-semibold"
-                    : "text-gray-200"
+                    : "text-gray-400"
                 }`}
                 to="/dashboard"
               >
-                Dashboard
+                DASHBOARD
               </Link>
             </li>
           )}
           {!token && (
             <Link to="/register">
-              <li className=" sm:ml-0 -ml-1 text-white  cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md  hover:text-slate-300   transition-all duration-150" style={{ backgroundColor: '#FF7F3E' }}>
-                SignUp
+              <li className=" font-quicksand sm:ml-0 -ml-1 text-white cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md  hover:text-gray-900 transition-all duration-150" style={{ backgroundColor: '#f36a3e' }}>
+                SIGN UP
               </li>
             </Link>
           )}
@@ -77,9 +77,10 @@ const Navbar = () => {
           {token && (
             <button
               onClick={onLogOutHandler}
-              className="sm:ml-0 -ml-1 bg-rose-700 text-white  cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md  hover:text-slate-300   transition-all duration-150"
+              className="font-quicksand sm:ml-0 -ml-1 text-white  cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md  hover:text-slate-300   transition-all duration-150"
+              style={{backgroundColor: 'gray'}}
             >
-              LogOut
+              LOG OUT
             </button>
           )}
         </ul>

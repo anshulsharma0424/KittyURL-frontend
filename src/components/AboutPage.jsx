@@ -3,20 +3,14 @@ import { FaLink, FaShareAlt, FaEdit, FaChartLine } from "react-icons/fa";
 const AboutPage = () => {
   return (
     <div className="lg:px-14 sm:px-8 px-5 min-h-[calc(100vh-64px)] pt-2">
-      <div className="bg-white w-full sm:py-10 py-8  ">
-        <h1 className="sm:text-4xl text-slate-800 text-3xl font-bold italic  mb-3">
-          About Linklytics
+      <div className="w-full sm:py-10 py-8  ">
+        <h1 className="sm:text-4xl text-slate-800 text-3xl font-bold font-quicksand  mb-3">
+          About KittyURL
         </h1>
-        <p className="text-gray-700 text-sm  mb-8 xl:w-[60%] lg:w-[70%] sm:w-[80%] w-full ">
-          KittyURL simplifies URL shortening for efficient sharing. Easily
-          generate, manage, and track your shortened links. KittyURL simplifies
-          URL shortening for efficient sharing. Easily generate, manage, and
-          track your shortened links. KittyURL simplifies URL shortening for
-          efficient sharing. Easily generate, manage, and track your shortened
-          links. KittyURL simplifies URL shortening for efficient sharing.
-          Easily generate, manage, and track your shortened links.
+        <p className="font-quicksand space-y-5 mb-5 text-justify w-full xl:w-[60%] lg:w-[70%] sm:w-[80%] w-full ">
+        KittyURL is your all-in-one solution for smarter, faster, and more secure link sharing. We transform long, complicated URLs into clean, memorable links — perfect for sharing across platforms, tracking performance, and managing your digital presence with ease. Whether you're a marketer, creator, business, or casual user, KittyURL empowers you to take control of your links with simplicity and confidence.
         </p>
-        <div className="space-y-5 xl:w-[60%] lg:w-[70%] sm:w-[80%] w-full ">
+        <div className="text-justify font-quicksand space-y-5 xl:w-[60%] lg:w-[70%] sm:w-[80%] w-full ">
           <div className="flex items-start">
             <FaLink className="text-blue-500 text-3xl mr-4" />
             <div>

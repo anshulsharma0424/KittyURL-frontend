@@ -62,7 +62,7 @@ const CreateNewShorten = ({ setOpen, refetch }) => {
       onSubmit={handleSubmit(createShortUrlHandler)}
       className="relative w-full"
     >
-      <h1 className="font-montserrat text-center font-bold text-[22px] text-slate-800">
+      <h1 className="font-quicksand text-center font-bold text-[22px] text-slate-800">
         Create New Shorten URL
       </h1>
 

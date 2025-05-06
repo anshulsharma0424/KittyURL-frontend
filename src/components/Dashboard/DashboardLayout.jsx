@@ -42,7 +42,7 @@ const DashboardLayout = () => {
   }, [location.search]);
 
   return (
-    <div className="lg:px-14 sm:px-8 px-4 min-h-[calc(100vh-64px)]">
+    <div className="font-quicksand lg:px-14 sm:px-8 px-4 min-h-[calc(100vh-64px)]">
       {clicksLoading ? (
         <Loader />
       ) : (
@@ -65,10 +65,10 @@ const DashboardLayout = () => {
           {/* Create Short URL Button */}
           <div className="py-5 sm:text-end text-center">
             <button
-              className="bg-custom-gradient px-4 py-2 rounded-md text-white"
+              className="w-40 font-semibold text-white font-quicksand rounded-md py-2 bg-btnColor shadow-md hover:shadow-lg"
               onClick={() => setShortenPopUp(true)}
             >
-              Create a New Short URL
+              Create Short URL
             </button>
           </div>
 

@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="bg-custom-gradient text-white py-4 z-40 relative">
       <div className="container mx-auto px-6 lg:px-14 flex flex-col lg:flex-row justify-between items-center gap-4">
-        <p className="text-sm text-center lg:text-left">
-          &copy; 2025 KittyURL. All rights reserved.
+        <p className="font-quicksand text-[12px] text-center lg:text-left">
+          &copy; 2025 KittyURL | All rights reserved.
         </p>
 
         <div className="flex space-x-5">
