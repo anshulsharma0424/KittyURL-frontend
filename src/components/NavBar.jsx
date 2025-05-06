@@ -4,7 +4,6 @@ import { IoIosMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { useStoreContext } from "../contextApi/ContextApi";
 
-
 const Navbar = () => {
   const navigate = useNavigate();
   const { token, setToken } = useStoreContext();
@@ -21,10 +20,13 @@ const Navbar = () => {
     <div className="h-16 bg-custom-gradient  z-50 flex items-center sticky top-0 ">
       <div className="lg:px-14 sm:px-8 px-4 w-full flex justify-between">
         <Link to="/">
-          <h1 className="font-bold text-3xl text-white italic sm:mt-0 mt-2">
-            Linklytics
-          </h1>
+          <img
+            src="" // or "/myfavicon.ico" if it's an image
+            alt="KittyURL Logo"
+            className="w-12 h-12 sm:mt-0 mt-2 rounded-[12%]"
+          />
         </Link>
+
         <ul
           className={`flex sm:gap-10 gap-4 sm:items-center sm:mt-1 sm:pt-0 pt-3 text-slate-800 sm:static absolute left-0 top-[62px] sm:shadow-none shadow-md ${
             navbarOpen ? "h-fit sm:pb-0 pb-5" : "h-0 overflow-hidden"
@@ -52,31 +54,34 @@ const Navbar = () => {
           </li>
           {token && (
             <li className="hover:text-btnColor font-[500]  transition-all duration-150">
-            <Link
-              className={`${
-                path === "/dashboard" ? "text-white font-semibold" : "text-gray-200"
-              }`}
-              to="/dashboard"
-            >
-              Dashboard
-            </Link>
-          </li>
+              <Link
+                className={`${
+                  path === "/dashboard"
+                    ? "text-white font-semibold"
+                    : "text-gray-200"
+                }`}
+                to="/dashboard"
+              >
+                Dashboard
+              </Link>
+            </li>
           )}
           {!token && (
             <Link to="/register">
-              <li className=" sm:ml-0 -ml-1 bg-rose-700 text-white  cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md  hover:text-slate-300   transition-all duration-150">
+              <li className=" sm:ml-0 -ml-1 text-white  cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md  hover:text-slate-300   transition-all duration-150" style={{ backgroundColor: '#FF7F3E' }}>
                 SignUp
               </li>
             </Link>
-            )}
+          )}
 
           {token && (
             <button
-             onClick={onLogOutHandler}
-             className="sm:ml-0 -ml-1 bg-rose-700 text-white  cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md  hover:text-slate-300   transition-all duration-150">
+              onClick={onLogOutHandler}
+              className="sm:ml-0 -ml-1 bg-rose-700 text-white  cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md  hover:text-slate-300   transition-all duration-150"
+            >
               LogOut
             </button>
-            )}
+          )}
         </ul>
         <button
           onClick={() => setNavbarOpen(!navbarOpen)}

@@ -35,14 +35,16 @@ const LandingPage = () => {
             transition={{ duration: 0.8 }}
             className="font-bold font-roboto text-slate-800 md:text-5xl sm:text-4xl text-3xl md:leading-[55px] sm:leading-[45px] leading-10 lg:w-full md:w-[70%] w-full"
           >
-            Linklytics Simplifies URL Shortening For Efficient Sharing.
+            Simplify Your Links with KittyURL
           </motion.h1>
-          <p className="text-slate-700 text-sm my-5">
-            Linklytics streamlines the process of URL shortening, making sharing
-            links effortless and efficient. With its user-friendly interface,
-            Linklytics allows you to generate concise, easy-to-share URLs in
-            seconds. Simplify your sharing experience with Linklytics today.
+
+          <p className="text-slate-600 mt-4 text-base md:text-lg my-5">
+            KittyURL transforms long, messy URLs into sleek, shareable links in
+            seconds. Whether you're promoting content, tracking performance, or
+            just simplifying your sharing process — KittyURL makes it
+            effortless.
           </p>
+
           <div className="flex items-center gap-3">
             <motion.button
               initial={{ opacity: 0, y: 80 }}
@@ -50,7 +52,8 @@ const LandingPage = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               onClick={goToDashboard}
-              className="bg-custom-gradient w-40 text-white rounded-md py-2"
+              className="w-40 text-white rounded-md py-2"
+              style={{ backgroundColor: "#FF7F3E" }}
             >
               Manage Links
             </motion.button>
@@ -86,27 +89,27 @@ const LandingPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-slate-800 font-roboto font-bold lg:w-[60%] md:w-[70%] sm:w-[80%] mx-auto text-3xl text-center"
+          className="text-center font-roboto font-semibold text-2xl sm:text-3xl mb-10"
         >
-          Trusted by individuals and teams at the world’s best companies
+          Trusted by individuals and teams at leading companies worldwide
         </motion.p>
 
         <div className="pt-4 pb-7 grid lg:gap-7 gap-4 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-4">
           <Card
-            title="Simple URL Shortening"
-            desc="Experience the ease of creating short, memorable URLs in just a few clicks. Our intuitive interface and quick setup process ensure you can start shortening URLs without any hassle."
+            title="Effortless URL Shortening"
+            desc="Create concise, shareable URLs instantly with our sleek and user-friendly platform. Get started in seconds—no technical skills required."
           />
           <Card
-            title="Powerful Analytics"
-            desc="Gain insights into your link performance with our comprehensive analytics dashboard. Track clicks, geographical data, and referral sources to optimize your marketing strategies."
+            title="Insightful Analytics"
+            desc="Track the performance of your links in real-time with detailed metrics, including click counts, geolocation, and traffic sources to maximize your impact."
           />
           <Card
-            title="Enhanced Security"
-            desc="Rest assured with our robust security measures. All shortened URLs are protected with advanced encryption, ensuring your data remains safe and secure."
+            title="Secure & Private"
+            desc="Benefit from enterprise-grade security and data encryption. Your URLs and analytics are safeguarded with strict privacy protocols."
           />
           <Card
-            title="Fast and Reliable"
-            desc="Enjoy lightning-fast redirects and high uptime with our reliable infrastructure. Your shortened URLs will always be available and responsive, ensuring a seamless experience for your users."
+            title="Blazing Fast & Reliable"
+            desc="Experience instant redirects and 99.9% uptime thanks to our robust infrastructure. Share with confidence—your links are always live."
           />
         </div>
       </div>
